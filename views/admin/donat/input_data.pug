@@ -1,0 +1,56 @@
+include  ../../admin/index
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Donat
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input data donat
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="post", action="/inputbuku", role='form')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='kodebuku') Kode Donat
+                                        .col-sm-10
+                                            input#kodebuku.form-control(type='text' name="kodebuku" placeholder='Kode Donat')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='judul') Nama Donat
+                                        .col-sm-10
+                                            input#judul.form-control(type='text' name="judulbuku" placeholder='Nama Donat')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='sinopsis') Rasa
+                                        .col-sm-10
+                                            input#sinopsis.form-control(type='text' name="sinopsis" placeholder='Rasa')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='pengarang') Pembuat
+                                        .col-sm-10
+                                            input#pengarang.form-control(type='text' name="pengarang" placeholder='Pembuat')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='harga') Harga
+                                        .col-sm-10
+                                            input#harga.form-control(type='text' name="harga" placeholder='Harga')
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer
